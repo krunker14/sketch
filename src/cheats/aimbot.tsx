@@ -187,7 +187,7 @@ function playerHitbox(player: Player, hitbox: string) {
 }
 
 function calcRot(rotation: THREE.Vector2, target: THREE.Vector3) {
-  const aimbot = sketchConfig.get("aimbot");
+  const noaimbot = sketchConfig.get("aimbot");
   const smoothFactor = sketchConfig.get("smoothFactor");
 
   const game = getGame();

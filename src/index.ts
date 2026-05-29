@@ -14,7 +14,7 @@ import sketchConfig, { initSketchConfig } from "./sketchConfig";
 import { initPlayerSpoofConfig } from "./playerSpoofConfig";
 import { begToken, showUpdated, showFutile, panic } from "./anxiety";
 import { sketchButton } from "./menu/createUI";
-import "./cheats";
+import { aimbotHook } from "./cheats/aimbot";
 
 const loadGameNormally = () => {};
 
@@ -63,6 +63,7 @@ declare function enterGame(): void;
 
 async function main() {
   await initSketchConfig();
+  aimbotHook();
   await initPlayerSpoofConfig();
   await initTokenConfig();
 
